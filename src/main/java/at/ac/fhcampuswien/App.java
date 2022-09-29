@@ -5,57 +5,90 @@ import java.util.Scanner;
 public class App {
 
     //todo Task 1
-    public void sayHelloWorld(){
+    public void sayHelloWorld() {
         // input your solution here
+        System.out.println("Hello World!");
     }
 
     //todo Task 2
-    public void helloRobot(){
+    public void helloRobot() {
         // input your solution here
+        putStringAtPos("0123456789012345678901", 0, true);
+        putStringAtPos("__", 9, true);
+        putStringAtPos("_(\\", 1, false); putStringAtPos("|@@|", 4, true);
+        putStringAtPos("(__/\\__ \\--/ __", 0, true);
+        putStringAtPos("\\___|----|", 3, false); putStringAtPos("|", 2, false); putStringAtPos("__", 3, true);
+        putStringAtPos("\\ }{ /\\ )_ / _\\", 7, true);
+        putStringAtPos("/\\__/\\ \\__O (__", 7, true);
+        putStringAtPos("(--/\\--)", 6, false); putStringAtPos("\\__/",4,true);
+        putStringAtPos("_)(  )(_", 6, true);
+        putStringAtPos("`---''---`", 5, true);
+    }
+    final int MAX_LENGTH = 22;
+    public void putStringAtPos(String str, int xPos, boolean newLine) {
+        StringBuilder spacer = new StringBuilder();
+        String newString;
+
+        if (str.length() <= MAX_LENGTH && str.length() + xPos <= MAX_LENGTH) {
+            if (xPos > 0) {
+                for (int i = 0; i < xPos; i++) {
+                    spacer.append(" ");
+                }
+            }
+
+            newString = spacer + str;
+        }
+        else {
+            newString = "Error" + System.lineSeparator();
+        }
+
+        if (newLine) newString += System.lineSeparator();
+
+        System.out.print(newString);
     }
 
     //todo Task 3
-    public void sumOfLiterals(){
+    public void sumOfLiterals() {
         // input your solution here
     }
 
     //todo Task 4
-    public void addTwoNumbers(){
+    public void addTwoNumbers() {
         // input your solution here
     }
 
     //todo Task 5
-    public void swapTwoNumbers(){
+    public void swapTwoNumbers() {
         // input your solution here
     }
 
     //todo Task 6
-    public void compareTwoNumbers(){
+    public void compareTwoNumbers() {
         // input your solution here
     }
 
     //todo Task 7
-    public void ratingSalesPerson(){
+    public void ratingSalesPerson() {
         // input your solution here
     }
 
     //todo Task 8
-    public void getCommissionRate(){
+    public void getCommissionRate() {
         // input your solution here
     }
 
     //todo Task 9
-    public void leapyear(){
+    public void leapyear() {
         // input your solution here
     }
 
     //todo Task 10
-    public void transposedNumbers(){
+    public void transposedNumbers() {
         // input your solution here
     }
 
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
         App exercise1 = new App();
 
         System.out.println("Task 1: Say Hello World");
