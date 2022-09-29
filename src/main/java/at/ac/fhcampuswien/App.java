@@ -79,6 +79,7 @@ public class App {
 
         x = sc.nextInt();
         y = sc.nextInt();
+
         sum = x + y;
 
         System.out.println(sum);
@@ -87,6 +88,24 @@ public class App {
     //todo Task 5
     public void swapTwoNumbers() {
         // input your solution here
+        Scanner sc = new Scanner(System.in);
+        int x;
+        int y;
+
+        //Get Input
+        System.out.println("Before Swap:");
+        System.out.print("x: "); x = sc.nextInt();
+        System.out.print("y: "); y = sc.nextInt();
+
+        //Swap Vars
+        x += y;
+        y = x - y;
+        x = x - y;
+
+        //Output
+        System.out.println("After Swap:");
+        System.out.println("x: " + x);
+        System.out.println("y: " + y);
     }
 
     //todo Task 6
