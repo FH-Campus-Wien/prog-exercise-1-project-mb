@@ -50,6 +50,18 @@ public class App {
     //todo Task 3
     public void sumOfLiterals() {
         // input your solution here
+        int _char = 'Z';
+        int _hex = 0xface;
+        int _oct = 012;
+        long _long = 80L;
+        float _float0 = 44e-1f;
+        float _float1 = 5.5f;
+        double _edouble = 8.88e1;
+        double _double = 99.9;
+
+        int sum = _char + _hex + _oct + (int)_long + (int)_float0 + (int)_float1 + (int)_edouble + (int)_double;
+
+        System.out.println(sum);
     }
 
     //todo Task 4
