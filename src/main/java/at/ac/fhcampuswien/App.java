@@ -15,16 +15,22 @@ public class App {
         // input your solution here
         putStringAtPos("0123456789012345678901", 0, true);
         putStringAtPos("__", 9, true);
-        putStringAtPos("_(\\", 1, false); putStringAtPos("|@@|", 4, true);
+        putStringAtPos("_(\\", 1, false);
+        putStringAtPos("|@@|", 4, true);
         putStringAtPos("(__/\\__ \\--/ __", 0, true);
-        putStringAtPos("\\___|----|", 3, false); putStringAtPos("|", 2, false); putStringAtPos("__", 3, true);
+        putStringAtPos("\\___|----|", 3, false);
+        putStringAtPos("|", 2, false);
+        putStringAtPos("__", 3, true);
         putStringAtPos("\\ }{ /\\ )_ / _\\", 7, true);
         putStringAtPos("/\\__/\\ \\__O (__", 7, true);
-        putStringAtPos("(--/\\--)", 6, false); putStringAtPos("\\__/",4,true);
+        putStringAtPos("(--/\\--)", 6, false);
+        putStringAtPos("\\__/", 4, true);
         putStringAtPos("_)(  )(_", 6, true);
         putStringAtPos("`---''---`", 5, true);
     }
+
     final int MAX_LENGTH = 22;
+
     public void putStringAtPos(String str, int xPos, boolean newLine) {
         StringBuilder spacer = new StringBuilder();
         String newString;
@@ -37,8 +43,7 @@ public class App {
             }
 
             newString = spacer + str;
-        }
-        else {
+        } else {
             newString = "Error" + System.lineSeparator();
         }
 
@@ -59,7 +64,7 @@ public class App {
         double _edouble = 8.88e1;
         double _double = 99.9;
 
-        int sum = _char + _hex + _oct + (int)_long + (int)_float0 + (int)_float1 + (int)_edouble + (int)_double;
+        int sum = _char + _hex + _oct + (int) _long + (int) _float0 + (int) _float1 + (int) _edouble + (int) _double;
 
         System.out.println(sum);
     }
@@ -67,6 +72,16 @@ public class App {
     //todo Task 4
     public void addTwoNumbers() {
         // input your solution here
+        Scanner sc = new Scanner(System.in);
+        int x;
+        int y;
+        int sum;
+
+        x = sc.nextInt();
+        y = sc.nextInt();
+        sum = x + y;
+
+        System.out.println(sum);
     }
 
     //todo Task 5
