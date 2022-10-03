@@ -220,6 +220,27 @@ public class App {
     //todo Task 10
     public void transposedNumbers() {
         // input your solution here
+        int input;
+        int h, t, u;
+
+        System.out.print("Number: ");
+        input = sc.nextInt();
+
+        // Get specific digit on position
+        // for Example:
+        // Val:     100 10  1
+        // Pos:     100 10  1
+        // ------------------
+        // Digit:   1   2   3
+        h = GetDigitOnPos(input, 100);
+        t = GetDigitOnPos(input, 10);
+        u = GetDigitOnPos(input, 1);
+
+        System.out.printf("%d%d%d" + System.lineSeparator(), u, t, h);
+    }
+
+    private int GetDigitOnPos(double num, int pos) {
+        return (int)((num / pos) % 10);
     }
 
 
