@@ -143,7 +143,29 @@ public class App {
     //todo Task 7
     public void ratingSalesPerson() {
         // input your solution here
+        int turnover;
+
+        System.out.print("Enter annual Revenue: ");
+        turnover = sc.nextInt();
+
+        System.out.println(CheckTurnover(turnover));
     }
+
+    private String CheckTurnover(int turnover) {
+        String result;
+
+        if (turnover >= 0 && turnover < 100000) {
+            if (turnover < 20000) result = "Poor Sales Revenue";
+            else if (turnover < 50000) result = "Average Sales Revenue";
+            else if (turnover < 80000) result = "Good Sales Revenue";
+            else result = "Excellent Sales Revenue";
+        } else {
+            result = "Invalid Revenue";
+        }
+
+        return result;
+    }
+
 
     //todo Task 8
     public void getCommissionRate() {
