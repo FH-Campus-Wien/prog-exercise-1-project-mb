@@ -182,21 +182,39 @@ public class App {
         System.out.println("Your Commission Rate was set to " + commisionRate);
     }
 
-    private double GetCommissionRate(int _class)
-    {
-        switch (_class)
-        {
-            case 1: return 0.01;
-            case 2: return 0.02;
-            case 3: return 0.03;
-            case 4: return 0.04;
-            default: return 0.00;
+    private double GetCommissionRate(int _class) {
+        switch (_class) {
+            case 1:
+                return 0.01;
+            case 2:
+                return 0.02;
+            case 3:
+                return 0.03;
+            case 4:
+                return 0.04;
+            default:
+                return 0.00;
         }
     }
 
     //todo Task 9
     public void leapyear() {
         // input your solution here
+        int year;
+
+        System.out.print("Year: ");
+        year = sc.nextInt();
+
+        System.out.println(IsLeapyear(year));
+    }
+
+    private String IsLeapyear(int year) {
+        if (year % 4 == 0) {
+            if (year % 100 == 0) {
+                if (year % 400 == 0) return "Leapyear";
+                else return "Not a Leapyear";
+            } else return "Leapyear";
+        } else return "Not a Leapyear";
     }
 
     //todo Task 10
