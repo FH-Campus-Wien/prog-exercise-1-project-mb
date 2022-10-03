@@ -170,6 +170,28 @@ public class App {
     //todo Task 8
     public void getCommissionRate() {
         // input your solution here
+        int _class;
+        double commisionRate;
+
+        System.out.print("Enter CommissionClass: ");
+        _class = sc.nextInt();
+
+        // get commissionRate of class
+        commisionRate = GetCommissionRate(_class);
+
+        System.out.println("Your Commission Rate was set to " + commisionRate);
+    }
+
+    private double GetCommissionRate(int _class)
+    {
+        switch (_class)
+        {
+            case 1: return 0.01;
+            case 2: return 0.02;
+            case 3: return 0.03;
+            case 4: return 0.04;
+            default: return 0.00;
+        }
     }
 
     //todo Task 9
