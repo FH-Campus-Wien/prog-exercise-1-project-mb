@@ -4,6 +4,9 @@ import java.util.Scanner;
 
 public class App {
 
+    //global vars
+    Scanner sc = new Scanner(System.in);
+
     //todo Task 1
     public void sayHelloWorld() {
         // input your solution here
@@ -35,6 +38,9 @@ public class App {
         StringBuilder spacer = new StringBuilder();
         String newString;
 
+        //Appends xPos spaces to the spacer unles
+        //  newString-lenght would be greater than MAX_LENGTH or
+        //  xPos is less than 1
         if (str.length() <= MAX_LENGTH && str.length() + xPos <= MAX_LENGTH) {
             if (xPos > 0) {
                 for (int i = 0; i < xPos; i++) {
@@ -44,9 +50,11 @@ public class App {
 
             newString = spacer + str;
         } else {
+            //Outputs Error when string-lenght would be greater than MAX_LENGTH
             newString = "Error" + System.lineSeparator();
         }
 
+        //Add linebreak when 'newLine' is true
         if (newLine) newString += System.lineSeparator();
 
         System.out.print(newString);
@@ -72,14 +80,15 @@ public class App {
     //todo Task 4
     public void addTwoNumbers() {
         // input your solution here
-        Scanner sc = new Scanner(System.in);
         int x;
         int y;
         int sum;
 
+        //Get user input
         x = sc.nextInt();
         y = sc.nextInt();
 
+        //Calc sum
         sum = x + y;
 
         System.out.println(sum);
@@ -88,14 +97,15 @@ public class App {
     //todo Task 5
     public void swapTwoNumbers() {
         // input your solution here
-        Scanner sc = new Scanner(System.in);
         int x;
         int y;
 
-        //Get Input
+        //Get user input
         System.out.println("Before Swap:");
-        System.out.print("x: "); x = sc.nextInt();
-        System.out.print("y: "); y = sc.nextInt();
+        System.out.print("x: ");
+        x = sc.nextInt();
+        System.out.print("y: ");
+        y = sc.nextInt();
 
         //Swap Vars
         x += y;
@@ -108,9 +118,30 @@ public class App {
         System.out.println("y: " + y);
     }
 
+    final int MAX_Runs = 3;
+
     //todo Task 6
     public void compareTwoNumbers() {
         // input your solution here
+        int n1;
+        int n2;
+
+        for (int i = 0; i < MAX_Runs; i++) {
+            //Get user input
+            System.out.print("n1: ");
+            n1 = sc.nextInt();
+            System.out.print("n2: ");
+            n2 = sc.nextInt();
+
+            //Compare user inputs
+            System.out.println(CompareInput(n1, n2) + System.lineSeparator());
+        }
+    }
+
+    private String CompareInput(int n1, int n2) {
+        if (n1 > n2) return "n1 > n2";
+        else if (n2 > n1) return "n2 > n1";
+        else return "n1 == n2";
     }
 
     //todo Task 7
